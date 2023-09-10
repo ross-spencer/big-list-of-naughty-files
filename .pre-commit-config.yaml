@@ -30,6 +30,13 @@ repos:
   rev: v2.2.4
   hooks:
     - id: codespell
+      exclude: >
+        (?x)^(
+            .*\.json|
+            .*\.pyc|
+            \.tox|
+            .*blns.txt
+        )$
 - repo: local
   hooks:
     - id: pylint

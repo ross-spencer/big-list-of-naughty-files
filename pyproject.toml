@@ -9,7 +9,7 @@
 #
 
 # Required.
-name = "orcfax-template"
+name = "big-list-naughty-files"
 
 # Required.
 #
@@ -18,10 +18,10 @@ name = "orcfax-template"
 # ready for release if it was accidentally uploaded. It would need to become
 # 1.0.1 to replace 1.0.0 - but only if rc1, rc2 etc. wasn' appended at first.
 #
-version = "0.0.1-rc2"
+version = "0.0.0"
 
 # Optional.
-description = "A one-line description of this Python project"
+description = "Create troublesome files from the Big List of Naughty Strings"
 
 # Optional.
 readme = "README.md"
@@ -37,13 +37,12 @@ keywords = ["template", "setuptools", "development"]
 
 # Optional.
 authors = [
-  {name = "A. Developer", email = "author_one@example.com" },
-  {name = "A.N. Other Developer", email = "author_two@example.com" },
+  {name = "R. Spencer", email = "all.along.the.watchtower2001+github@gmail.com" },
 ]
 
 # Optional. E.g. individual or organisation, e.g. app-support@organization.com.
 maintainers = [
-  {name = "A. Project Maintainer", email = "maintainer@example.com" }
+  {name = "R. Spencer", email = "all.along.the.watchtower2001+github@gmail.com" }
 ]
 
 # Optional.
@@ -51,7 +50,6 @@ maintainers = [
 # For a list of valid classifiers, see https://pypi.org/classifiers/
 #
 classifiers = [
-  "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
   "Topic :: Software Development :: Build Tools",
   "License :: OSI Approved :: MIT License",
@@ -66,18 +64,15 @@ classifiers = [
 #
 # Packages installed by pip when the project is installed.
 dependencies = [
-  # "package1==6.0.0",
-  # "package2==6.0.0",
+  "python-slugify==8.0.1",
 ]
 
 # Optional.
 #
 [project.urls]
-"Homepage" = "https://example.com/project/"
-"Bug Reports" = "https://example.com/issues/"
-"Funding" = "https://example.com/funding/"
-"Say Thanks!" = "http://example.com/thanks/"
-"Source" = "https://example.com/sourcecode/"
+"Homepage" = "https://github.com/ross-spencer/big-list-of-naughty-files/"
+"Bug Reports" = "https://github.com/ross-spencer/big-list-of-naughty-files/issues/"
+"Source" = "https://github.com/ross-spencer/big-list-of-naughty-files/"
 
 # Optional.
 #
@@ -85,7 +80,7 @@ dependencies = [
 # function `main` from this package when invoked.
 #
 [project.scripts]
-template = "template.template:main"
+template = "blnf.blnf:main"
 
 [build-system]
 requires = ["setuptools>=67.8.0", "wheel"]

@@ -1,1 +1,2 @@
 # requirements for the production project.
+python-slugify==8.0.1

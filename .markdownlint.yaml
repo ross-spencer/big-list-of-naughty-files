@@ -2,4 +2,4 @@
 default: true
 
 # Exceptions, example given, MD045
-# MD012: false    # no multiple blank-lines.
+MD046: false    # code-block style.

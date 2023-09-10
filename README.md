@@ -1,6 +1,60 @@
-# Template repository
+# Big List of Naughty Files
 
-Template repository for Python projects.
+Script to generate troublesome filenames from the big list of naughty strings:
+[blns][blns-1]
+
+[blns-1]: https://github.com/minimaxir/big-list-of-naughty-strings
+
+The output should be useful for testing the file-handling capabilities of
+most systems that read files from disk. Digital preservation systems
+anticipate a lot of heterogeneous data and so this script is written with
+testing those systems in mind.
+
+## Introduction
+
+Big-List-of-Naughty-Files (BLNF) converts the Big List of Naughty
+Strings (BLNS) to file names and outputs sample files for each.
+
+* Original by: Max Woolfe converted the list to JSON.
+
+The script tries to convert as many strings from BLNS to file names as
+possible.
+
+txt_to_files.py outputs three folders:
+
+```text
+    * blnf-output/ <-- contains the two folders below
+    * files <-- contains files we were able to write to the file system.
+    * converted files <-- contains files we couldn't but simplified the
+                          string for, so may still be challenging.
+```
+
+You are very likely to have better luck running this script on Linux.
+Microsoft control names for example are part of the set.
+
+Is the script dangerous? I don't know. Don't run it as `sudo`.
+
+Files are output as follows:
+
+```text
+    ├──output
+        ├───files
+        └───files-converted
+```
+
+And take the form:
+
+    * `<blns-filename>.<unique-string>.blnf`
+
+### Interesting strings
+
+Some interesting strings:
+
+```text
+!@#$%^&*()`~
+<>?:"{}|_+
+Ω≈ç√∫˜µ≤≥÷
+```
 
 ## Developer install
 
