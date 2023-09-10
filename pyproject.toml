@@ -1,0 +1,92 @@
+[project]
+# For more information on package metadata see:
+#
+#   * https://packaging.python.org/specifications/core-metadata/
+#
+# For even greater information on this file, see the pypa/sampleproject:
+#
+#   * https://github.com/pypa/sampleproject/blob/fc8d83efd5749853507be959d858629d0aaf5c6e/pyproject.toml
+#
+
+# Required.
+name = "orcfax-template"
+
+# Required.
+#
+# NB. Use suffixes such as rc1 liberally as the version, once it is on PyPi
+# will be permanent. I.e. It isn't possible to replace a 1.0.0 which is not
+# ready for release if it was accidentally uploaded. It would need to become
+# 1.0.1 to replace 1.0.0 - but only if rc1, rc2 etc. wasn' appended at first.
+#
+version = "0.0.1-rc2"
+
+# Optional.
+description = "A one-line description of this Python project"
+
+# Optional.
+readme = "README.md"
+
+# Supported python versions. Optional, but helpful.
+requires-python = ">=3.9"
+
+# Optional.
+license = {file = "LICENSE.txt"}
+
+# Optional.
+keywords = ["template", "setuptools", "development"]
+
+# Optional.
+authors = [
+  {name = "A. Developer", email = "author_one@example.com" },
+  {name = "A.N. Other Developer", email = "author_two@example.com" },
+]
+
+# Optional. E.g. individual or organisation, e.g. app-support@organization.com.
+maintainers = [
+  {name = "A. Project Maintainer", email = "maintainer@example.com" }
+]
+
+# Optional.
+#
+# For a list of valid classifiers, see https://pypi.org/classifiers/
+#
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+# Optional.
+#
+# Packages installed by pip when the project is installed.
+dependencies = [
+  # "package1==6.0.0",
+  # "package2==6.0.0",
+]
+
+# Optional.
+#
+[project.urls]
+"Homepage" = "https://example.com/project/"
+"Bug Reports" = "https://example.com/issues/"
+"Funding" = "https://example.com/funding/"
+"Say Thanks!" = "http://example.com/thanks/"
+"Source" = "https://example.com/sourcecode/"
+
+# Optional.
+#
+# Provide a command line executable called `template` which executes the
+# function `main` from this package when invoked.
+#
+[project.scripts]
+template = "template.template:main"
+
+[build-system]
+requires = ["setuptools>=67.8.0", "wheel"]
+build-backend = "setuptools.build_meta"

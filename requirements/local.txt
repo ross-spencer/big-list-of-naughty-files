@@ -1,0 +1,7 @@
+# requirements to run locally and for development.
+-r requirements.txt
+
+pre-commit==3.3.2
+pylint==2.17.4
+pytest==7.3.1
+tox==4.5.2
