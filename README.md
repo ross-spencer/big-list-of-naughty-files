@@ -1,4 +1,4 @@
-# Big List of Naughty Files
+# Big List of Naughty Files (BLNF)
 
 Script to generate troublesome filenames from the big list of naughty strings:
 [blns][blns-1]
@@ -85,7 +85,8 @@ filename in-place of the UUID.
 
 ### Interesting strings
 
-Some interesting strings I have found cause issues along the way:
+Some interesting and innocuous looking strings I have found some systems
+struggle with when testing them alongside the BLNF:
 
 ```text
 !@#$%^&*()`~
