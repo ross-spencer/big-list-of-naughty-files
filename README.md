@@ -15,12 +15,25 @@ testing those systems in mind.
 Big-List-of-Naughty-Files (BLNF) converts the Big List of Naughty
 Strings (BLNS) to file names and outputs sample files for each.
 
-* Original by: Max Woolfe converted the list to JSON.
+Insprired initially by Max Woolfe who converted the list to JSON. This script
+now takes the plain-text rendition from the [BLNS][blns-1] repository to
+generate its output.
 
-The script tries to convert as many strings from BLNS to file names as
+To get started, run the following:
+
+```sh
+git clone git@github.com:ross-spencer/big-list-of-naughty-files.git \
+ && cd big-list-of-naughty-files
+python -m venv venv
+source venv/bin/activate
+python -m pip install -r requirements/requirements.txt
+python blnf.py
+```
+
+The script tries to convert as many strings from [BLNS][blns-1] to file names as
 possible.
 
-txt_to_files.py outputs three folders:
+`python blnf.py` outputs three folders:
 
 ```text
     * blnf-output/ <-- contains the two folders below
@@ -32,7 +45,8 @@ txt_to_files.py outputs three folders:
 You are very likely to have better luck running this script on Linux.
 Microsoft control names for example are part of the set.
 
-Is the script dangerous? I don't know. Don't run it as `sudo`.
+Is the script dangerous? I don't know. Don't run it as `sudo`. When using the
+output against your systems, try to only use it on test servers.
 
 Files are output as follows:
 
@@ -46,9 +60,29 @@ And take the form:
 
     * `<blns-filename>.<unique-string>.blnf`
 
+### Checksums
+
+By default, all files share the same checksum:
+`e049fd364abc35f24fd66f056d30f95c` which might be an important in systems that
+perform deduplication.
+
+### Filenames
+
+Filenames that are generated are guaranteed to be unique with the generation and
+appending of a UUID to the filename.
+
+### Future work
+
+It might be beneficial to make each file's payload unique but predictable. The
+same with the filename.
+
+It might be possible to achieve this by hashing the anticipated filename and
+writing it to the file's contents and then using a part of the hash as the
+filename in-place of the UUID.
+
 ### Interesting strings
 
-Some interesting strings:
+Some interesting strings I have found cause issues along the way:
 
 ```text
 !@#$%^&*()`~
@@ -68,6 +102,21 @@ python3 -m venv venv
 source venv/bin/activate
 python -m pip install -r requirements/local.txt
 ```
+
+### Project structure
+
+The project structure is as follows:
+
+```text
+src
+└── blnf
+    ├── blnf.py
+    ├── blns.txt
+    ├── __init__.py
+```
+
+`blns.txt` contains a snapshot of the big list of naughty strings for
+processing.
 
 ### tox
 
