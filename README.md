@@ -51,7 +51,7 @@ output against your systems, try to only use it on test servers.
 Files are output as follows:
 
 ```text
-    ├──output
+    ├──blnf-output
         ├───files
         └───files-converted
 ```
@@ -59,6 +59,9 @@ Files are output as follows:
 And take the form:
 
     * `<blns-filename>.<unique-string>.blnf`
+
+At the time of writing the script outputs: `2 directories, 511 files` on
+`Ubuntu 22.04.4 LTS` running `Python 3.10.12`.
 
 ### Checksums
 
