@@ -44,8 +44,8 @@ In the current release:
 
 #### Duplicates
 
-Systems will need to be aware that all the files are duplicates of one anohter
-with the exception of their filenames. Thie should be accounted for in testing.
+Systems will need to be aware that all the files are duplicates of one another
+with the exception of their filenames. This should be accounted for in testing.
 
 ### Filenames
 
