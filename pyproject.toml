@@ -64,7 +64,7 @@ classifiers = [
 #
 # Packages installed by pip when the project is installed.
 dependencies = [
-  "python-slugify==8.0.1",
+  "python-slugify==8.0.4",
 ]
 
 # Optional.
