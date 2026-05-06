@@ -24,3 +24,5 @@ cp RELEASE.md blnf
 
 md5sum blnf.zip > blnf.md5
 cat blnf.md5
+sha256sum blnf.zip > blnf.sha256
+cat blnf.sha256
