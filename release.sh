@@ -5,6 +5,8 @@ set -eux
 # package blnf using 7z.
 
 rm -rf blnf/
+rm -f blnf.zip
+rm -r blnf.md5
 mkdir -p blnf/
 cp -r blnf-output/ blnf
 
@@ -19,3 +21,6 @@ cat blnf/manifest.sha256 | wc -l
 cp RELEASE.md blnf
 
 7z a blnf.zip blnf/
+
+md5sum blnf.zip > blnf.md5
+cat blnf.md5
