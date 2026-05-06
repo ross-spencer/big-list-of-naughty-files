@@ -18,4 +18,4 @@ cat blnf/manifest.sha256 | wc -l
 
 cp RELEASE.md blnf
 
-7z a blnf.7z blnf/
+7z a blnf.zip blnf/

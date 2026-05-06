@@ -37,11 +37,6 @@ At the time of writing the script outputs: `2 directories, 511 files` on
 Two manifests are included in the `7z` file for validating the contents on
 extract.
 
-### Filenames
-
-Filenames that are generated are guaranteed to be unique and a partial UUID is
-appended to each filename.
-
 In the current release:
 
 * md5 = `e049fd364abc35f24fd66f056d30f95c`
@@ -51,6 +46,11 @@ In the current release:
 
 Systems will need to be aware that all the files are duplicates of one anohter
 with the exception of their filenames. Thie should be accounted for in testing.
+
+### Filenames
+
+Filenames that are generated are guaranteed to be unique and a partial UUID is
+appended to each filename.
 
 ### Datetimes
 
@@ -66,6 +66,12 @@ struggle with:
 <>?:"{}|_+
 Ω≈ç√∫˜µ≤≥÷
 ```
+
+### 7z
+
+The package format is 7z (7-zip) and is named zip for GitHub releases. Use
+7zip for the most compatible extract, other decompress tools may not
+perform equally.
 
 ### Caution
 
