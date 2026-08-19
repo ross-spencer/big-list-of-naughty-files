@@ -1,7 +1,7 @@
 # requirements to run locally and for development.
 -r requirements.txt
 
-pre-commit==4.3.0
+pre-commit==4.6.2
 pylint==3.3.9
 pytest==8.4.2
 tox==4.30.3
